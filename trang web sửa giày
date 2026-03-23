@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> DR SHOE - HỆ THỐNG SPA ĐỒ HIỆU </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Poppins',sans-serif;background:#0f172a;color:#e2e8f0}
 
+    header{
+      height:100vh;
+      background:linear-gradient(120deg,#0f172a,#1e293b,#334155);
+      display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center
+    }
+    header h1{font-size:48px;font-weight:700}
+    header p{margin-top:10px;color:#94a3b8}
+    header button{
+      margin-top:20px;padding:12px 25px;border:none;border-radius:30px;
+      background:#22c55e;color:white;font-size:16px;cursor:pointer;
+      transition:0.3s
+    }
+    header button:hover{transform:scale(1.1)}
+
+    section{padding:60px 10%}
+    h2{margin-bottom:20px;font-size:28px}
+
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+    .card{
+      background:#1e293b;padding:20px;border-radius:15px;
+      transition:0.3s;cursor:pointer
+    }
+    .card:hover{transform:translateY(-10px);box-shadow:0 10px 30px rgba(0,0,0,0.5)}
+
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
+    .gallery div{
+      height:150px;background:#334155;border-radius:10px;
+      display:flex;align-items:center;justify-content:center;color:#94a3b8
+    }
+
+    .form input,.form textarea{
+      width:100%;padding:10px;margin:10px 0;border:none;border-radius:8px
+    }
+    .form button{
+      padding:12px;border:none;border-radius:8px;background:#22c55e;color:white;width:100%;cursor:pointer
+    }
+
+    footer{
+      text-align:center;padding:20px;background:#020617;color:#64748b
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1> DR SHOE - HỆ THỐNG SPA ĐỒ HIỆU </h1>
+  <p>Dịch vụ chăm sóc giày dép & túi xách chuyên nghiệp</p>
+  <button onclick="scrollToSection('services')">Khám phá dịch vụ</button>
+</header>
+
+<section id="services">
+  <h2>Dịch vụ của chúng tôi</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Vệ sinh cao cấp</h3>
+      <p>Làm sạch chuyên sâu, giữ form & màu.</p>
+    </div>
+    <div class="card">
+      <h3>Sửa chữa</h3>
+      <p>Khâu, dán, thay đế chuyên nghiệp.</p>
+    </div>
+    <div class="card">
+      <h3>Tân trang</h3>
+      <p>Phục hồi như mới, nhuộm màu.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Trước & Sau</h2>
+  <div class="gallery">
+    <div>Ảnh 1</div>
+    <div>Ảnh 2</div>
+    <div>Ảnh 3</div>
+    <div>Ảnh 4</div>
+  </div>
+</section>
+
+<section>
+  <h2>Đặt lịch ngay</h2>
+  <div class="form">
+    <input type="text" placeholder="Tên của bạn">
+    <input type="tel" placeholder="Số điện thoại">
+    <textarea rows="4" placeholder="Mô tả dịch vụ"></textarea>
+    <button onclick="alert('Đã gửi! Chúng tôi sẽ liên hệ bạn sớm.')">Gửi yêu cầu</button>
+
+
+    <p>HOTLINE📞 : 0348347007</p>
+    <p>ĐỊA CHỈ📍: Cơ sở 1: 296/20 Nguyễn Văn Lượng, Phường Gò Vấp, Gò Vấp, TP. Hồ Chí Minh</p>
+    <p> Cơ sở 2: 22C Xuân Thới Sơn 12, Xuân Thới Sơn, Hóc Môn, TP. Hồ Chí Minh</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026  DR SHOE - HỆ THỐNG SPA ĐỒ HIỆU</p>
+</footer>
+
+<script>
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
